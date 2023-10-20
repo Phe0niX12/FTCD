@@ -1,0 +1,16 @@
+type::= "i"|"b"|"c"|"f"
+arraydecl::= type"::"IDENTIFIER"[" nr "]"
+declaration ::= type"::"IDENTIFIER
+declist::= = declaration | declaration newline declist
+assignstmt ::= IDENTIFIER"="expression
+expression ::=expression("+"|"-"|"*"|"/")term| term
+iostmt ::= "PO"| "PI" "(" IDENTIFIER ")"
+simplstmt ::= assignstmt | iostmt
+cmpdstmt ::= "{"stmtlist"}"
+stmtlist ::= stmt | stmt newline stmtlist
+stmt ::= simplstmt | structstmt
+structstmt ::= cmpdstmt | ifstmt | whilestmt
+ifstmt ::= "JST" "("condition")" "{" stmt "}" ["LAT" "{"stmt"}"]
+whilestmt ::= "ALA" condition "{"stmt"}"
+condition ::= expression RELATION expression
+RELATION ::= ">" | ">=" | "<" | "<=" | "==" | "!="

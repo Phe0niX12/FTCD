@@ -1,0 +1,22 @@
+Alphabet
+a-z
+A-Z
+0-9
+_
+
+Lexic
+
+operators: +, -, *, /, ==, <, <=, >, >=, =, !=
+separators: {}, (), space, newline, ""
+reserved words: , AF, PO, PI, JST, LAT.
+
+identifier = letter|letter{letter|digit|"_"}
+letter = "A"|"B"|..|"Z"|"a"|"b"..|"z"
+digit = "0"|"1"|..|"9"
+
+int_constant = ["+"|"-"] non_zero_digit {digit} | "0"
+non_zero_digit = "1"|"2"|..|"9"
+
+constchar := "string"
+string := char{string}
+char := letter|digit
