@@ -1,0 +1,73 @@
+P1:
+
+i:: first_num
+i:: second_num
+i:: legatura
+
+ALA(b != 0){
+	legatura = first_num # second_num
+	first_num = second_num
+	second_num = legatura	
+}
+
+PO(a)
+
+
+P2:
+
+i:: first
+i:: second
+i:: third
+
+JST( first > second ){
+	JST( second > third )
+		PO( third )
+	LAT
+		PO( second )
+}
+LAT{
+	JST( first > third )
+		PO( third )
+	LAT 
+		PO( first )
+}
+
+P3:
+
+i:: nr_numbers
+i:: sum 
+i:: num
+AF ( i::index | index < n | index = index + 1){
+	PI(num)
+	sum = sum + num	
+}
+PO(sum)
+
+
+
+p1err:
+
+i:: first
+i:: second
+i:: third
+
+
+first = ~pa0
+second = 2a!@
+
+JST( first > second ){
+	JST( second > third )
+		PO( third )
+	LAT
+		PO( second )
+}
+LAT{
+	JST( first > third )
+		PO( third )
+	LAT 
+		PO( first )
+}
+
+
+
+
