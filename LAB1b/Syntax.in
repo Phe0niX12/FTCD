@@ -4,6 +4,8 @@ declaration ::= type"::"IDENTIFIER
 declist::= = declaration | declaration newline declist
 assignstmt ::= IDENTIFIER"="expression
 expression ::=expression("+"|"-"|"*"|"/")term| term
+term ::= term * factor | factor
+factor = "("expression")" | IDENTIFIER
 iostmt ::= "PO"| "PI" "(" IDENTIFIER ")"
 simplstmt ::= assignstmt | iostmt
 cmpdstmt ::= "{"stmtlist"}"
