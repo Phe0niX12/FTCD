@@ -1,0 +1,5 @@
+SymbolTable_I{ 
+identifiers HashTable=HashTable{items=[[], [], [], [], [], [], [], [legatura, legatura, legatura], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [second_num, second_num, second_num, second_num, second_num], [], [], [], [], [], [], [], [], [], [first_num, first_num, first_num, first_num], [], [], []]}
+ int Const HashTable=HashTable{items=[[0], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []]}
+ string Const HashTable=HashTable{items=[[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []]}
+}
