@@ -1,7 +1,0 @@
-i:: first
-i:: second
-i:: third
-
-
-first = ~pa0
-second = 2a!@
