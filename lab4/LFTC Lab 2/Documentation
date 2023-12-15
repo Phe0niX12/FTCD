@@ -1,4 +1,0 @@
-
-
-I made a symbol table using a hash table with a hashing method which does "number mod capacity" if it is a interger number and "sum
-of all character (in ascii) mod capacity" if it is a string value
