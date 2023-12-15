@@ -1,0 +1,25 @@
+program statement statement_list compound_statement expression term factor iostmt simple_type array_declaration declaration assignment_statement if_statement while_statement return_statement for_statement for_header condition relation letter digit non_zero_digit
+; { } + - * / ) ( read write identifier const array [ ] = if else while return for int string char < <= == != >= >  : A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z 0 1 2 3 4 5 6 7 8 9
+program
+program -> compound_statement
+statement -> declaration | assignment_statement | if_statement | while_statement | return_statement | for_statement | iostmt
+statement_list -> statement | statement ; statement_list
+compound_statement -> { statement_list }
+expression -> expression + term | expression - term | term
+term -> term * factor | term / factor | factor
+factor -> ( expression ) | identifier | const
+iostmt -> read ( identifier ) | write ( identifier ) | write ( const )
+simple_type -> int | string | char
+array_declaration -> array : simple_type
+declaration -> simple_type identifier |array_declaration
+assignment_statement -> identifier = expression
+if_statement->if ( condition ) compound_statement | if ( condition ) compound_statement else compound_statement
+while_statement -> while ( condition ) compound_statement
+return_statement -> return expression
+for_statement -> for for_header compound_statement
+for_header -> ( int assignment_statement ; condition ; assignment_statement )
+condition -> expression relation expression
+relation -> < | <= | == | != | >= | >
+letter -> A | B | C | D | E | F | G | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z | a | b | c | d | e | f | g | h |  i |  j |  k | l | m | n | o | p  | q | r  | s |  t |  u  | v | w | x | y | z
+digit -> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+non_zero_digit -> 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
