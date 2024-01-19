@@ -1,0 +1,11 @@
+i:: first_num
+i:: second_num
+i:: legatura
+
+ALA(b != 0){
+	legatura = first_num # second_num
+	first_num = second_num
+	second_num = legatura	
+}
+
+PO(a)
